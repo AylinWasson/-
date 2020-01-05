@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<a href="http://127.0.0.1:5000/ "><button type="submit">返回</button></a>
+<h1>冰岛女性社会地位</h1>
+<p>根据2018年世界经济论坛发布《2018年全球性别差距报告》中，消除逾85.8%性别差距的冰岛稳居全球性别差距指数榜首，连续十年成为全球性别最平等的国家。自2006年以来，冰岛在缩小性别差距方面的表现一直遥遥领先。</p>
+<form method="POST" action="/thirdone">
+    <select name="the_region_selected">
+        {% for item in the_select_region %}
+            <option value="{{ item }}">{{ item }}</option>
+        {% endfor %}
+    </select>
+<p><input value='进入' type='SUBMIT'></p>
+</form>
+
+    <h3>{{ text }}</h3>
+
+ {{ the_res|safe }}
+{{ the_plot|safe }}
+
+<p>{{ending}}</p>
+{% endblock %}
