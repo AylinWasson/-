@@ -20,7 +20,7 @@ python期末项目
 
 * python文档
 
-我总共设置了4个url:
+我总共设置了4个url:"/","/second","/third","/thirdone"
 
 "/"为主页面，通过按钮可以跳转至第二页面"/second"和第三页面"/third"，其中HTML和可视图的数据传递和交互完成。
 
