@@ -14,7 +14,7 @@ python期末项目
 
 * HTML文档：
 
-一类是包含合作项目可视化HTML文件，另一类则是放置flask对应页面的HTML。
+一类是包含合作项目可视化HTML文件example.html系列，另一类则是放置flask对应页面的HTML，在文件夹templates中。
 
 其中result.html属于第一个页面对应“/”主页面，其中我通过设置了可以链接跳转的按钮（通过button和a实现）将两个按钮分别对应第二页面和第三页面，并使用了div对按钮内容进行包裹，使其在同一行呈现；在区别内容程度，我分别用了p,h1,h3进行包裹。
   
@@ -36,7 +36,7 @@ python期末项目
 
 在第四页面"/thirdone"中我使用“post”的接收方式，接收到从“/third”所提交的表单数据，在这个页面中完成了下拉菜单，利用了字典的读取还有列表，，通过菜单里面选择的内容完成数据的传递，然后由第四个页面"/thirdone"进行数据的接收和呈现。
 
-其中the_region = request.form["the_region_selected"]这里的"the_region_selected"对应的是page2.html文档中的select下拉框中的选项；利用with语句打开生成可视化图文件（example1.html），通过数据绑定传输到page2.html当中显示。
+其中the_region = request.form["the_region_selected"]这里的"the_region_selected"对应的是page2.html文档中的select下拉框中的选项，并且the_region_selected形成列表；利用with语句打开生成可视化图文件（example1.html），用if和elif 进行判断，再通过得到的数据绑定传输到page2.html当中显示。
 
 data_str = dict[the_region].to_html()，text = texts[the_region]，ending = endings[the_region]，链接通过接收到下拉框中的选项，以字典的方式获得对应的HTML表格（data_str）及小标题文字（text）和看图总结（ending).
 
